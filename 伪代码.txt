@@ -1,0 +1,63 @@
+Procedure GA
+begin
+	initialize P(0);
+	t=0;
+	bE=0;
+	while (t<=T) do
+		for i=1 to M do
+			E[i] <- Evaluate operation to P(t);
+		end for
+		for i=1 to M do
+			Select operation to P(t);
+		end for
+		for i=1 to M do
+			if random(0~1) <crossover rate do
+				Crossover operation to P(i);
+			end if
+		end for
+		for i=1 to M do
+			if random(0~1) <crossover rate do
+				Mutation operration to P(i);
+			end if
+		end for
+		for i=1 to M do
+			P(t+1)=P(t)
+		end for
+		if  bE<max(E) do
+			bE=max(E)
+		end if
+		t=t+1
+	end while
+end
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
